@@ -11,11 +11,17 @@ public class Record {
 
     }
 
-    Record(){
-        throw new MyExceptionClass('Record not valid');
+    Record() throws MyExceptionClass{
+        throw new MyExceptionClass("Record not valid");
     }
 
-    Record
+    Record(long id) throws MyExceptionClass{
+        throw new MyExceptionClass("Record not valid");
+    }
+
+    Record(long id, String pn) throws MyExceptionClass{
+        throw new MyExceptionClass("Record not valid");
+    }
 }
 
 
