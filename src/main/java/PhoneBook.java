@@ -9,6 +9,10 @@ public class PhoneBook {
 
     }
 
+    PhoneBook(Record r){
+        recordsList.add(r);
+    }
+
     //Getter
     public List<Record> getAllRecords(){
         return recordsList;
@@ -33,5 +37,27 @@ public class PhoneBook {
             }
         }
         recordsList.add(record);
+    }
+
+    public void updateRecord(Record record){
+        for(int i = 0; i<recordsList.size(); i++){
+            if(recordsList.get(i).id == record.id){
+                recordsList.get(i).phoneNumber = record.phoneNumber;
+                recordsList.get(i).Name = record.Name;
+                return;
+            }
+        }
+        throw new MyUncheckedException("Record Not Found");
+
+    }
+
+    public void deleteRecord(long id){
+        for(int i = 0; i<recordsList.size();i++){
+            if(recordsList.get(i).id ==  id){
+                recordsList.remove(i);
+                return;
+            }
+        }
+        throw new MyUncheckedException("Record Not found");
     }
 }
