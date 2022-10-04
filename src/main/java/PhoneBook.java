@@ -18,6 +18,9 @@ public class PhoneBook {
         return recordsList;
     }
 
+    /*
+    Made this function to change new record id in case of coincidence
+     */
     public long getMaxid(){
         long j = 0;
         for(int i=0;i<recordsList.size();i++){
@@ -27,6 +30,11 @@ public class PhoneBook {
         }
         return j;
     }
+
+    /*
+    Because it wasn`t written in task, that id duplicate should throw an exception,
+    I decided to change argument`s id in case of coincidence
+     */
     public void createRecord(Record record) throws MyExceptionClass{
         for(int i = 0; i<recordsList.size(); i++){
             if(Objects.equals(recordsList.get(i).phoneNumber, record.phoneNumber)){
