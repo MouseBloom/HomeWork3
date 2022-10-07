@@ -5,7 +5,7 @@ public class Test1 {
 
     public static void main(String[] args) throws MyExceptionClass {
 
-        //Record not params not filled in initialization
+        //Record params not filled in initialization
         try{
             PhoneBook pB = new PhoneBook (new Record(100, "+7913"));
         }

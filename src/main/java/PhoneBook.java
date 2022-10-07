@@ -47,6 +47,9 @@ public class PhoneBook {
         recordsList.add(record);
     }
 
+    /*
+    Changes existing record info
+     */
     public void updateRecord(Record record){
         for(int i = 0; i<recordsList.size(); i++){
             if(recordsList.get(i).id == record.id){
@@ -59,6 +62,9 @@ public class PhoneBook {
 
     }
 
+    /*
+    Deletes record by it`s id
+     */
     public void deleteRecord(long id){
         for(int i = 0; i<recordsList.size();i++){
             if(recordsList.get(i).id ==  id){

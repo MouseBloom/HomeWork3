@@ -20,7 +20,7 @@ public class Record {
     }
 
     /*
-    I dont know how to check that constructor is filled with arguments,
+    I dont know how to check that arguments are given to constructor,
     So made extra 3 constructors for this case
      */
     Record() throws MyExceptionClass{
